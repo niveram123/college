@@ -1,0 +1,209 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department</title>
+    <style>
+        .style {
+            margin-left: 170px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 1.8rem;
+        }
+        
+        .image {
+            float: left;
+            width: 130px;
+            height: 130px;
+            padding-top: 0px;
+            padding-bottom: 10px;
+            filter: drop-shadow( 1px 1px 1px rgb(233, 233, 238));
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            margin: 2px;
+            padding: 2px;
+            font-size: 20px;
+            font-weight: 20px;
+            margin-left: 150px;
+            color: rgb(184, 182, 182);
+        }
+        
+        .wrapper {
+            padding: 1.8 rem;
+            float: left
+        }
+        
+        .first {
+            background-color: rgb(49, 49, 49);
+            box-shadow: 1px 2px 5px rgb(134, 134, 24);
+            padding-bottom: 30px;
+            padding-top: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            padding: 1.5rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            display: grid;
+            color: rgb(237, 237, 243);
+            font-size: 18px;
+            padding: 10px;
+        }
+        
+        nav a:hover {
+            color: red;
+        }
+        /*--------content of the page----*/
+        
+        .figures {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            padding: 1rem;
+            background-image: url(http://oyonode.com/images/theme-pics/paralax-grey-3.jpg);
+            background-size: cover;
+            padding: 80px;
+            margin: 0px;
+            margin-bottom: 1px;
+            box-shadow: 4px 1px 5px #333;
+        }
+        
+        .img-container {
+            box-sizing: content-box;
+            font-size: 20px;
+            width: 90%;
+            height: auto;
+            transition-duration: 1s;
+            box-shadow: 2px 5px 5px rgb(82, 77, 77);
+            background: rgb(172, 221, 107);
+        }
+        
+        img {
+            width: 100px;
+            height: auto;
+            padding: 2rem;
+            padding-left: 70px;
+        }
+        
+        .img-container:hover {
+            width: 100%;
+            box-shadow: 5px 3px 5px rgb(184, 182, 182);
+        }
+        
+        .img-container p {
+            text-align: center;
+            padding: 3px;
+            font-size: 20px;
+        }
+        /*------footer-------*/
+        
+        .foot {
+            box-sizing: border-box;
+            background-color: rgb(43, 42, 42);
+            color: #fff;
+            box-shadow: 1px 2px 5px rgb(110, 110, 12);
+            margin: 0px;
+        }
+        
+        .foot p {
+            color: rgb(237, 236, 240);
+            text-align: center;
+            padding: 1.8rem;
+            text-shadow: 0px 1px 1px rgb(216, 218, 221);
+            font-size: 20px;
+            font-weight: 20px;
+        }
+        
+        @media(max-width:700px) {
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 2px;
+            }
+            nav a {
+                font-size: 20px;
+                padding: 10px;
+                color: rgb(105, 190, 79)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!----heading---->
+    <section class="first">
+        <div class="wrapper">
+            <img class="image" src="https://recentquestionpaper.com/wp-content/uploads/2017/05/anna-university-project-report-1024x1017.png">
+            <span class="style">
+
+                    <h1>University College Of Engineering Tindivanam</h1>
+                    <h3>(A constituent college of anna university,chennai)</h3>
+                    <h2>Melpakkam-606001</h2>
+                </span>
+        </div>
+        <div class="head">
+            <nav>
+                <ul>
+                    <a href="home.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="https://www.annauniv.edu/">
+                        <li>AU Home</li>
+                    </a>
+                    <a href="About.html">
+                        <li>About Us</li>
+                    </a>
+                    <a href="Administration.html">
+                        <li>Administration</li>
+                    </a>
+                    <a href="department.html">
+                        <li>Departments</li>
+                    </a>
+                    <a href="Contact Us.html">
+                        <li>Contact Us</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </section><br/>
+
+    <!-----------------content of the page---------------------------->
+    <div class="figures">
+        <div class=img-container>
+            <img src="http://www.aucet.in/img/civil.png" /></a>
+            <p>Civil Engineering</p>
+        </div>
+        <div class=img-container>
+            <img src="http://www.aucet.in/img/cse.png" />
+            <p>Computer Science and Engineering</p>
+        </div>
+        <div class=img-container>
+            <img src="http://www.aucet.in/img/ece.png" />
+            <p>Electronics and Communication Engineering</p>
+        </div>
+        <div class=img-container>
+            <img src="http://www.aucet.in/img/it.png" />
+            <p>Information Technology</p>
+        </div>
+    </div>
+    <!-----footer------>
+    <div class="foot">
+        <p>web page &copy;2021</p>
+
+    </div>
+
+</body>
+
+</html>

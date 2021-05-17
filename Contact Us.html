@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <style>
+        .style {
+            margin-left: 170px;
+            color: rgb(39, 34, 34);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .image {
+            float: left;
+            width: 130px;
+            height: 130px;
+            margin-top: 0px;
+            padding-top: 0px;
+            padding-bottom: 20px;
+            filter: drop-shadow( 2px 2px 1px rgb(243, 243, 243));
+        }
+        
+        h1,
+        h2,
+        h3 {
+            margin: 2px;
+            padding: 3px;
+            font-size: 19px;
+            font-weight: 25px;
+            margin-left: 140px;
+            color: rgb(238, 234, 234);
+        }
+        
+        .wrapper {
+            padding: 1.8rem;
+            float: left
+        }
+        
+        .first {
+            background-color: #333;
+            box-shadow: 1px 2px 5px rgb(134, 134, 24);
+            padding-bottom: 30px;
+            padding-top: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            padding: 1.8rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            display: grid;
+            color: white;
+            font-size: 16px;
+            padding: 15px;
+        }
+        
+        nav a:hover {
+            color: darkblue;
+        }
+        /*----------content------*/
+        
+        .boxes h1 {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            padding: 10px;
+            text-shadow: 0px 1px 5px rgb(39, 39, 121);
+        }
+        
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            padding: 1.8rem;
+            margin-left: 200px;
+        }
+        
+        .box1 li {
+            background: rgb(247, 0, 42);
+            border-radius: 50%;
+            color: #fff;
+            box-sizing: border-box;
+            padding: 1.3rem;
+            box-shadow: 0px 0px 3px 3px white;
+        }
+        
+        .box2 li {
+            color: #fff;
+            background: green;
+            border-radius: 50%;
+            padding: 1.3rem;
+            box-shadow: 0px 0px 3px 3px white;
+        }
+        
+        .box3 li {
+            background: rgb(7, 184, 197);
+            color: white;
+            border-radius: 50%;
+            padding: 1.3rem;
+            box-shadow: 0px 0px 3px 3px white;
+        }
+        
+        .box1 p {
+            font-size: 18px;
+            padding: 0px;
+            color: white;
+            margin: 0px;
+        }
+        
+        .box2 p {
+            font-size: 18px;
+            padding: 0px;
+            color: white;
+            margin: 0px;
+        }
+        
+        .box3 p {
+            font-size: 18px;
+            padding: 0px;
+            color: white;
+            margin: 0px;
+        }
+        
+        .form {
+            padding: 1.8rem;
+            margin: 50px;
+            margin-left: 60%;
+            border: none;
+            outline: none;
+            margin-top: 0%;
+            margin-bottom: 100px;
+        }
+        
+        textarea {
+            width: 50%;
+            height: auto;
+            border-radius: 5px;
+            color: black;
+            border: none;
+            outline: none;
+        }
+        
+        .form input {
+            outline: none;
+            border: none;
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        input[type=submit] {
+            color: black;
+            background: rgb(30, 99, 17);
+        }
+        
+        .boxes {
+            background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBwcHBw0ICAcHBw0HBwcHCA8ICQcNFREiIiARExMYHSggGCYlJxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NDisZFRkrKysrKysrNysrKysrKysrKysrKystKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAABAAIG/8QAFhABAQEAAAAAAAAAAAAAAAAAABEB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A4jGsYxrGmGsaxjDgN4cZw4DRZOA0WacBoskGqqzSBLNVBpUICmVQKooAoUARRVoLQgCZQoLRq0aA0atGgkKBVhxnDgN4cZzTRGmsYpwG6WVQbLFNBtM00GlWTQaqrKoNJmqg0qzVQKFAGoADQKgQ1UUEEKC1nVo0FrOnWdFVQQDNazWMOA3hzWac0GzWKRG6azTQaprBBuqs00GqqyqDVLNVBqpmoGqKKqBqoooFUUUCKhQVFVFBUKigt0VbrNFW6N1aNBIIBhYxoGs1rNYw0G80sU0G6axTQbVZNEaprFNBos1A1VWaaBqoqoGqiig1VWaqBooqoGiiigaKKqKqNQoLRRRQLOoUEWUALNINU1mmg1Wqxmmg3mqs00GqaxTQbqrNVBupmqg3VWVRGqqzVQaqrNVFNVZVENVFFFNVZqoGiiigaKKN0DRRRQNZQA0CoAWTQaNZw4DVNZNBqmsU0G6qzTQaprFNBqqs1UG6qzVQaqrNVBqqs1UGqKKKDVFFFBqiiigaKKqBooooGiijdA0CgCmSDNLOGg1TWaQaLFNBuqs00GqaxTQaprNVBqmsGg1VWaqDVVZqoNVVmqg1RRVQNVZqoGiiqgaKKKBoVFA0UUAaN0UUCggCrJoNFmkGqawaDVNZpoNVVk0GqqzTQaVZqoNVVmqg1VRVQNVFFBqqs1UDVRRQNVFFA1UUUDQhQNFG6ANAo0CgkBTWCo1TWaaDVLFNBqms1UGqazVQaprKoNVVmmgaazUDVVZVBqqsqgaqKKDVVZqAqsqgaqABoCoJAUCAqBTKAFlINU1k1Rqpk0GqWKQaprNVBqqsmg1VWaqDVTNQNJlUGkyqDVVZqoGqioDRRUBFCA0CoFUABCCBTKAGskGlQgaqCBpUVKNVVmmg0mTQNNZqoNVM1UGkzVQaVZqoNUUKgVRQBqoqoGiiqgaBVUCKECVCBIVACkCKQI1IEUgSSAqpKJFIKqpKJJAlUkBUkCqqQBJAgkCQQKhIEggSSB//2Q==);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        
+        .icons {
+            margin-bottom: 50px;
+            margin-top: 10px;
+            float: left;
+            color: rgb(19, 18, 18);
+            margin-left: 150px;
+        }
+        
+        .icon {
+            margin-left: 200px;
+            color: white;
+            border-radius: 50%;
+            background: rgb(115, 29, 228);
+            width: 100px;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 0px 0px 3px 3px rgb(224, 222, 222);
+        }
+        
+        .icon:hover {
+            background: green;
+            color: black;
+            box-shadow: 0px 0px 3px 3px rgb(235, 229, 229);
+        }
+        /*--------footer-----*/
+        
+        .foot p {
+            color: #fff;
+            text-shadow: 0px 1px 5px blue;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        .foot {
+            background: rgb(22, 22, 22);
+            padding: 10px;
+            margin: 0px;
+            margin-top: 0px;
+            background: rgb(22, 22, 22);
+        }
+        
+        .box li:hover {
+            background: darkblue;
+            color: red;
+            box-shadow: 0px 0px 3px 3px black;
+        }
+        
+        @media(max-width:700px) {
+            .body {
+                grid-template-areas: 'contact''icon''form' 'form';
+            }
+            .icons h3 {
+                padding: 0px;
+                margin-left: 0px;
+                font-size: 20px;
+                padding-left: 0px;
+                text-align: center;
+            }
+            .icon {
+                margin: 0px;
+                padding: 0px;
+                padding-top: 10px;
+                margin-top: 25px;
+                margin-left: 70px;
+            }
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 2px;
+            }
+            nav a {
+                font-size: 20px;
+                padding: 10px;
+                color: rgb(105, 190, 79)
+            }
+            .form {
+                margin: 0px;
+                padding: 20px;
+            }
+            .contact {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 300px);
+                width: 100px;
+                grid-gap: 25px;
+                margin-left: 35%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!----heading---->
+    <section class="first">
+        <div class="wrapper">
+            <img class="image" src="https://recentquestionpaper.com/wp-content/uploads/2017/05/anna-university-project-report-1024x1017.png">
+            <span class="style">
+
+                <h1>University College Of Engineering Tindivanam</h1>
+                <h3>(A constituent college of anna university,chennai)</h3>
+                <h2>Melpakkam-606001</h2>
+
+            </span>
+        </div>
+
+        <div class="head">
+            <nav>
+                <ul>
+                    <a href="home.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="https://www.annauniv.edu/">
+                        <li>AU Home</li>
+                    </a>
+                    <a href="About.html">
+                        <li>About Us</li>
+                    </a>
+                    <a href="Administration.html">
+                        <li>Administration</li>
+                    </a>
+                    <a href="department.html">
+                        <li>Departments</li>
+                    </a>
+                    <a href="Contact Us.html">
+                        <li>Contact Us</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <br/>
+    <!-------content--------->
+    <div class="body">
+        <div class="boxes">
+            <h1>Contact Us</h1><br/>
+            <div class="contact">
+
+                <div class="box1 box">
+                    <li class="fa fa-home fa-4x"></li><br/><br/>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UCET</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Melpakkam</p>
+                    <p>Tindivanam-604 001</p>
+                </div>
+                <div class="box2 box">
+                    <li class="fa fa-phone fa-4x"></li><br/><br/>
+                    <p>04147-224477</p>
+                </div>
+                <div class="box3 box">
+                    <li class="fa fa-pencil fa-4x"></li><br/><br/>
+                    <p>annauniv.ucet@gmail.com</p>
+                </div>
+
+            </div>
+            <div class="icons">
+                <h3>This Mail will be directed to Dean of UCET</h3><br/><br/>
+                <div class="icon">
+                    <i class="fa fa-twitter fa-3x"></i>
+                </div><br/><br/>
+                <div class="icon">
+                    <i class="fa fa-facebook fa-3x"></i>
+                </div>
+            </div>
+
+            <form class="form">
+                <input type="text" size="15px" name="name" value="name"><br/><br/>
+                <input type="Email" size="50px" name="Email" value="xxx@123"><br/><br/>
+                <input type="text" size="15px" name="subject" value="subject"><br/><br/>
+                <textarea placeholder="message" size="30px" rows="6" cols="50"></textarea>
+                <br/><br/>
+                <input type="submit" name="mesaage" value="Send message">
+            </form>
+        </div>
+    </div>
+    <!--------footer-->
+    <div class="foot">
+        <p>web page &copy;2021
+        </p>
+    </div>
+</body>
+
+</html>
